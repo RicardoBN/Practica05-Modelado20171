@@ -53,7 +53,7 @@ def tiempoFaltante():
         hoyT = datetime(hoy.year, 9, 16, 0, 0, 0)
         dif = hoyT - hoy
         days, hours, minutes = dif.days, dif.seconds // 3600, dif.seconds // 60 % 60
-        if(dif.days ==0 and dif.seconds > 0):
+        if(dif.days < 365 and dif.days >= 0):
             x = "Faltan: "+str(dif.days)+" dias, "+str(hours)+" horas y "+str(minutes)+" minutos para el siguiente grito!!"
             return x
         else:      
